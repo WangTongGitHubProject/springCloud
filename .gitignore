@@ -1,1 +1,27 @@
-# Created by .ignore support plugin (hsz.mobi)
+#####
+## node_modules 文件夹不提交git
+######
+.git
+.vs
+bin
+obj
+logs
+Debug
+Release
+netcoreapp2.1
+.dll
+.pdb
+.cache
+*.pubxml
+*.user
+*.suo
+
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+/.settings
+/.classpath
+/.project
