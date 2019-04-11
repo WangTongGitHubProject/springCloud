@@ -10,3 +10,6 @@ eureka:
     serviceUrl: # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自己（如果不配置则默认本机8761端口）
       # 其实就是暴露注册中心，给其他服务调用，并且访问注册中心的地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false # 禁用自我保护模式
+
