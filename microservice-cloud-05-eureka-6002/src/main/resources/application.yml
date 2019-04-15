@@ -1,9 +1,9 @@
 server:
-  port: 6001 # 服务端口
+  port: 6002 # 服务端口
 
 eureka:
   instance:
-    hostname: eureka6001.com # eureka服务端的实例名称
+    hostname: eureka6002.com # eureka服务端的实例名称
   client:
     registerWithEureka: false # 服务注册，false表示不将自已注册到Eureka服务中
     fetchRegistry: false # 服务发现，false表示自己不从Eureka服务中获取注册信息
@@ -12,7 +12,7 @@ eureka:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       # 如果是集群的eureka，这里配置的是其他eureka服务器的地址
       # 假设你有三台eureka服务器，很简单，用逗号区分就可以了 defaultZone: http://eurake6002:6002/eureka/,http://eurake6003:6003/eureka/
-      defaultZone: http://eureka6002.com:6002/eureka/
+      defaultZone: http://eureke6001.com:6001/eureka/
   server:
     enable-self-preservation: false # 禁用自我保护模式
 
