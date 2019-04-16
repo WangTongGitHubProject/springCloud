@@ -1,5 +1,6 @@
 package com.wang.springcloud.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -18,7 +19,8 @@ public class ConfigBean {
         REST请求地址、请求参数、HTTP响应转换被转换成的对象类型
      * @return
      */
-    @Bean
+    @LoadBalanced //实现了负载均衡，调用地址IP可以变成服务名,服务名称就写被调用的那个yml配置中的服务名称
+    @Bean // 向容器中添加 RestTemplate 组件,直接通过此组件可调用 REST 接口
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

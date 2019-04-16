@@ -23,3 +23,40 @@ INSERT INTO product(product_name,db_source) VALUES('高贵鞋',DATABASE());
 
 SELECT * FROM product;
 
+========================================
+
+DROP DATABASE IF EXISTS springcloud_db02;
+
+CREATE DATABASE springcloud_db02 CHARACTER SET UTF8;
+
+USE springcloud_db02;
+
+CREATE TABLE product
+(
+pid BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+product_name VARCHAR(50),
+db_source VARCHAR(50)
+);
+
+INSERT INTO product(product_name,db_source) VALUES('格力空调',DATABASE());
+INSERT INTO product(product_name,db_source) VALUES('海尔冰箱',DATABASE());
+INSERT INTO product(product_name,db_source) VALUES('小短裙',DATABASE());
+INSERT INTO product(product_name,db_source) VALUES('羽绒服',DATABASE());
+INSERT INTO product(product_name,db_source) VALUES('韩版休闲鞋',DATABASE());
+INSERT INTO product(product_name,db_source) VALUES('高贵鞋',DATABASE());
+
+SELECT * FROM product;
+
+备注：在测试ribbon负载均衡的时候，
+我的消费者调用商品提供者，其中商品提供者有两个实例。
+其中每个实例访问不同的数据库。
+因为微服务中的每个实例可以访问不同的数据库。
+
+
+
+
+
+
+
+
+
