@@ -1,4 +1,4 @@
-#####
+﻿#####
 ## node_modules 文件夹不提交git
 ######
 .git
@@ -15,6 +15,7 @@ netcoreapp2.1
 *.pubxml
 *.user
 *.suo
+/.idea/
 
 
 # Package Files #
