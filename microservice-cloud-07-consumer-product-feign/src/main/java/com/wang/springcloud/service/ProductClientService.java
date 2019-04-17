@@ -12,7 +12,8 @@ import java.util.List;
 /**
  * Created by wangtong on 2019/4/16.
  */
-@FeignClient(value="microservice-product")  //指定调用的微服务的名称
+// fallback 作用，指定熔断处理类，如果被调用的方法处理异常，就会交给熔断处理类中的方法进行处理
+@FeignClient(value="microservice-product",fallback = ProductClientServiceFallBack.class)  //指定调用的微服务的名称
 public interface ProductClientService {
 
     @RequestMapping(value = "/product/add", method = RequestMethod.POST)
